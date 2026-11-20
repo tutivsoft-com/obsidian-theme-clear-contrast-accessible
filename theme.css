@@ -1,4 +1,4 @@
-/* Clear Contrast Accessible 1.0.0. MIT. */
+/* Clear Contrast Accessible 1.0.1. MIT. */
 
 body.theme-light {
   --background-primary: #ffffff;
@@ -81,6 +81,10 @@ body { --tab-text-color-active: var(--text-normal); --icon-opacity: 1; --icon-op
 .markdown-rendered a, .cm-hmd-internal-link, .cm-link { text-decoration: underline; }
 .nav-file-title.is-active { box-shadow: inset 3px 0 var(--text-accent); }
 .markdown-rendered .callout { border: 1px solid var(--background-modifier-border); }
+
+.is-mobile .markdown-source-view.mod-cm6 .cm-contentContainer > .cm-content {
+  padding-inline: 8px;
+}
 
 .workspace-leaf-content :focus-visible,
 .modal :focus-visible,

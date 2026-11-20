@@ -2,7 +2,7 @@
 
 An Obsidian theme that keeps secondary text, navigation and controls clearly readable.
 
-Version 1.0.0. Modes supported: Dark and light. Tested in Obsidian 1.15.1 on Windows.
+Source version 1.0.1. Modes supported: Dark and light. Tested in Obsidian 1.15.1 on Windows.
 
 The theme emphasises readable secondary text, visible focus and underlined links.
 

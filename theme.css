@@ -1,4 +1,4 @@
-/* Clear Contrast Accessible 3.8.0. MIT. */
+/* Clear Contrast Accessible 3.8.1. MIT. */
 
 body.theme-light {
   --background-primary: #ffffff;
@@ -91,6 +91,13 @@ body { --tab-text-color-active: var(--text-normal); --icon-opacity: 1; --icon-op
 .menu :focus-visible {
   outline: 2px solid var(--text-accent);
   outline-offset: -2px;
+}
+
+/* The inset focus ring needs to contrast with the button fill. */
+.workspace-leaf-content button.mod-cta:focus-visible,
+.modal button.mod-cta:focus-visible,
+.menu button.mod-cta:focus-visible {
+  outline-color: var(--text-on-accent);
 }
 
 .markdown-rendered .list-bullet::after,

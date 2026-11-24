@@ -7,7 +7,7 @@ import tinycss2
 
 
 ROOT = Path(__file__).resolve().parents[1]
-FOCUS_SCOPE = (".workspace-leaf-content", ".modal", ".menu")
+FOCUS_SCOPE = (".workspace-leaf-content", ".view-header", ".modal", ".is-popout-modal", ".menu")
 
 
 def rgb(value):
@@ -103,14 +103,50 @@ class ThemeTests(unittest.TestCase):
                 for surface in ("--background-primary", "--background-secondary"):
                     with self.subTest(scope=scope, mode=mode, surface=surface):
                         self.assert_contrast(palette[neutral_token], palette[surface], 3)
-                for surface in ("--interactive-accent", "--interactive-accent-hover"):
+                for surface in ("--interactive-accent", "--interactive-accent-hover", "--color-red"):
                     with self.subTest(scope=scope, mode=mode, surface=surface):
                         self.assert_contrast(palette[accent_token], palette[surface], 3)
 
     def test_links_are_underlined_in_reading_and_editing(self):
         for selector in (".markdown-rendered a", ".cm-hmd-internal-link", ".cm-link"):
             with self.subTest(selector=selector):
-                self.assertIn("underline", self.rules[selector]["text-decoration"].split())
+                self.assertIn("underline", self.rules[selector]["text-decoration-line"].split())
+
+    def test_unresolved_links_keep_full_contrast_with_a_distinct_underline(self):
+        links = self.rules["body"]
+        self.assertEqual(links["--link-unresolved-opacity"], "1")
+        self.assertEqual(links["--link-unresolved-decoration-style"], "dotted")
+        self.assertEqual(links["--link-unresolved-decoration-color"], "var(--link-unresolved-color)")
+
+    def test_callout_titles_contrast_with_tinted_backgrounds(self):
+        self.assertEqual(self.rules["body"]["--callout-quote"], "var(--text-muted)")
+        for mode, palette in self.palettes.items():
+            for token in ("--color-cyan", "--color-red", "--text-muted"):
+                foreground = palette[token]
+                background = f"color-mix(in srgb, {foreground} 10%, {palette['--background-primary']})"
+                with self.subTest(mode=mode, token=token):
+                    self.assert_contrast(foreground, background, 4.5)
+
+    def test_prompt_input_and_keyboard_selection_have_visible_indicators(self):
+        self.assertEqual(
+            self.rules["input.prompt-input:focus-visible"]["outline"],
+            "2px solid var(--text-accent)",
+        )
+        self.assertEqual(
+            self.rules["input.prompt-input"]["border-bottom-color"],
+            "var(--background-modifier-border)",
+        )
+        for selector in (
+            ".prompt .suggestion-item.is-selected",
+            ".menu-item.selected",
+            ".workspace-tab-header-container .workspace-tab-header.is-active",
+        ):
+            with self.subTest(selector=selector):
+                self.assertIn("var(--text-accent)", self.rules[selector]["box-shadow"])
+        for mode, palette in self.palettes.items():
+            with self.subTest(mode=mode):
+                self.assert_contrast(palette["--text-accent"], palette["--background-modifier-hover"], 3)
+                self.assert_contrast(palette["--background-modifier-border"], palette["--background-primary"], 3)
 
 
 if __name__ == "__main__":

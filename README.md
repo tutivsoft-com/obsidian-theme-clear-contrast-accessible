@@ -2,7 +2,7 @@
 
 An Obsidian theme that keeps secondary text, navigation and controls clearly readable.
 
-Source version 3.8.1. The theme supports dark and light modes and requires Obsidian 1.15.1 or later.
+Source version 3.8.2. The theme supports dark and light modes and requires Obsidian 1.15.1 or later.
 
 The theme emphasises readable secondary text, visible keyboard focus and underlined links.
 
@@ -21,5 +21,7 @@ The theme emphasises readable secondary text, visible keyboard focus and underli
 ## Verify the source
 
 Install the test dependency with `python -m pip install "tinycss2>=1.4,<2"` and run `python -B -m unittest discover -s tests`. The tests parse the stylesheet, check version metadata and link underlining, and measure representative text and focus contrast in both palettes against the [WCAG 2.2 thresholds](https://www.w3.org/TR/WCAG22/).
+
+See the [Obsidian UI verification and screenshots](docs/ui-test/2026-11-24/README.md).
 
 See the [original design plan](PLAN.md). [MIT license](LICENSE).

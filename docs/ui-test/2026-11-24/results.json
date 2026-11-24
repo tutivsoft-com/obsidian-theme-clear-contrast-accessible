@@ -1,0 +1,425 @@
+{
+  "date": "2026-11-24",
+  "platform": "Windows desktop",
+  "obsidian": "1.15.1",
+  "theme": "Clear Contrast Accessible",
+  "version": "3.8.2",
+  "cases": [
+    {
+      "case": "Theme loads in isolated Obsidian 1.15.1",
+      "result": "pass",
+      "detail": {
+        "vault": "QA vault clear_contrast",
+        "title": "Accessibility workshop - QA vault clear_contrast - Obsidian 1.15.1",
+        "activeTheme": "Clear Contrast Accessible",
+        "css": "/* Clear Contrast Accessible 3.8.2. MIT. */"
+      }
+    },
+    {
+      "case": "dark reading view, metadata, links, code, highlight and navigation text",
+      "result": "pass",
+      "detail": {
+        "ratios": {
+          "body": 16.28,
+          "secondary property label": 11.66,
+          "property heading": 16.28,
+          "code comment": 9.54,
+          "code string": 10.28,
+          "highlight": 9.37,
+          "internal": 11.07,
+          "external": 12.56,
+          "unresolved": 11.07,
+          "active file": 9.98,
+          "inactive file": 9.54,
+          "inactive tab": 9.54
+        },
+        "links": [
+          [
+            false,
+            "underline",
+            "solid"
+          ],
+          [
+            false,
+            "underline",
+            "solid"
+          ],
+          [
+            true,
+            "underline",
+            "dotted"
+          ]
+        ]
+      }
+    },
+    {
+      "case": "dark task state and file or tab markers",
+      "result": "pass",
+      "detail": {
+        "checked": [
+          true,
+          false
+        ],
+        "marker": "rgb(21, 26, 35)",
+        "edge": "rgb(201, 212, 229)",
+        "activeFile": "rgb(168, 210, 255) 3px 0px 0px 0px inset",
+        "activeTab": "rgb(168, 210, 255) 0px -3px 0px 0px inset, rgb(130, 148, 175) 0px 0px 0px 1px"
+      }
+    },
+    {
+      "case": "dark file hover and keyboard context menu selection",
+      "result": "pass",
+      "detail": {
+        "hovered file": 9.98,
+        "menu text": 13.32,
+        "mark": "rgb(168, 210, 255) 3px 0px 0px 0px inset",
+        "row": "Open to the right"
+      }
+    },
+    {
+      "case": "dark command palette keyboard focus, filtered results and selection",
+      "result": "pass",
+      "detail": {
+        "text": {
+          "placeholder": 11.66,
+          "result": 9.98
+        },
+        "control": {
+          "input edge": 5.65,
+          "focus outline": 11.07
+        },
+        "row": [
+          "Toggle ribbon",
+          "rgb(168, 210, 255) 3px 0px 0px 0px inset"
+        ]
+      }
+    },
+    {
+      "case": "dark live preview links and source editing",
+      "result": "pass",
+      "detail": {
+        "ratios": {
+          "editor": 16.28,
+          "internal": 11.07,
+          "external": 12.56,
+          "unresolved": 11.07,
+          "code comment": 9.54,
+          "highlight": 9.37
+        },
+        "selection": {
+          "selected": "note cove",
+          "nativeSelection": "note cove",
+          "background": "color(srgb 0.226471 0.282353 0.352941)",
+          "codeMirrorLayer": false
+        },
+        "rawSource": true
+      }
+    },
+    {
+      "case": "dark built-in callout titles and warning accents",
+      "result": "pass",
+      "detail": {
+        "results": {
+          "note": 8.88,
+          "abstract": 9.55,
+          "info": 8.88,
+          "todo": 8.88,
+          "tip": 9.55,
+          "success": 9.85,
+          "question": 8.85,
+          "warning": 8.85,
+          "failure": 8.01,
+          "danger": 8.01,
+          "bug": 8.01,
+          "example": 8.77,
+          "quote": 9.23
+        },
+        "edge": {
+          "callout edge": 4.59
+        }
+      }
+    },
+    {
+      "case": "dark modal keyboard cycle and destructive button contrast",
+      "result": "pass",
+      "detail": {
+        "description": 16.28,
+        "cancel label": 11.79,
+        "delete label": 9.74,
+        "cancel outline": 8.02,
+        "delete outline": 9.74,
+        "dismissed": true
+      }
+    },
+    {
+      "case": "dark vault search match and no-results states",
+      "result": "pass",
+      "detail": {
+        "search entry": 16.28,
+        "result title": 13.32,
+        "count": 9.54,
+        "empty": "No matches found."
+      }
+    },
+    {
+      "case": "light reading view, metadata, links, code, highlight and navigation text",
+      "result": "pass",
+      "detail": {
+        "ratios": {
+          "body": 16.49,
+          "secondary property label": 9.81,
+          "property heading": 16.49,
+          "code comment": 8.89,
+          "code string": 6.81,
+          "highlight": 11.31,
+          "internal": 8.88,
+          "external": 7.52,
+          "unresolved": 8.88,
+          "active file": 12.29,
+          "inactive file": 8.89,
+          "inactive tab": 8.89
+        },
+        "links": [
+          [
+            false,
+            "underline",
+            "solid"
+          ],
+          [
+            false,
+            "underline",
+            "solid"
+          ],
+          [
+            true,
+            "underline",
+            "dotted"
+          ]
+        ]
+      }
+    },
+    {
+      "case": "light task state and file or tab markers",
+      "result": "pass",
+      "detail": {
+        "checked": [
+          true,
+          false
+        ],
+        "marker": "rgb(255, 255, 255)",
+        "edge": "rgb(53, 69, 87)",
+        "activeFile": "rgb(25, 70, 151) 3px 0px 0px 0px inset",
+        "activeTab": "rgb(25, 70, 151) 0px -3px 0px 0px inset, rgb(100, 117, 138) 0px 0px 0px 1px"
+      }
+    },
+    {
+      "case": "light file hover and keyboard context menu selection",
+      "result": "pass",
+      "detail": {
+        "hovered file": 12.29,
+        "menu text": 14.95,
+        "mark": "rgb(25, 70, 151) 3px 0px 0px 0px inset",
+        "row": "Open to the right"
+      }
+    },
+    {
+      "case": "light command palette keyboard focus, filtered results and selection",
+      "result": "pass",
+      "detail": {
+        "text": {
+          "placeholder": 9.81,
+          "result": 12.29
+        },
+        "control": {
+          "input edge": 4.72,
+          "focus outline": 8.88
+        },
+        "row": [
+          "Toggle ribbon",
+          "rgb(25, 70, 151) 3px 0px 0px 0px inset"
+        ]
+      }
+    },
+    {
+      "case": "light live preview links and source editing",
+      "result": "pass",
+      "detail": {
+        "ratios": {
+          "editor": 16.49,
+          "internal": 8.88,
+          "external": 7.52,
+          "unresolved": 8.88,
+          "code comment": 8.89,
+          "highlight": 11.31
+        },
+        "selection": {
+          "selected": "note cove",
+          "nativeSelection": "note cove",
+          "background": "color(srgb 0.77451 0.818627 0.898039)",
+          "codeMirrorLayer": false
+        },
+        "rawSource": true
+      }
+    },
+    {
+      "case": "light built-in callout titles and warning accents",
+      "result": "pass",
+      "detail": {
+        "results": {
+          "note": 7.5,
+          "abstract": 6.31,
+          "info": 7.5,
+          "todo": 7.5,
+          "tip": 6.31,
+          "success": 6.43,
+          "question": 6.57,
+          "warning": 6.57,
+          "failure": 6.28,
+          "danger": 6.28,
+          "bug": 6.28,
+          "example": 7.17,
+          "quote": 8.29
+        },
+        "edge": {
+          "callout edge": 4.03
+        }
+      }
+    },
+    {
+      "case": "light modal keyboard cycle and destructive button contrast",
+      "result": "pass",
+      "detail": {
+        "description": 16.49,
+        "cancel label": 16.49,
+        "delete label": 7.44,
+        "cancel outline": 8.88,
+        "delete outline": 7.44,
+        "dismissed": true
+      }
+    },
+    {
+      "case": "light vault search match and no-results states",
+      "result": "pass",
+      "detail": {
+        "search entry": 16.49,
+        "result title": 14.95,
+        "count": 8.89,
+        "empty": "No matches found."
+      }
+    },
+    {
+      "case": "Light source mode at narrow desktop width",
+      "result": "pass",
+      "detail": {
+        "width": 620,
+        "documentWidth": 620,
+        "source": true,
+        "editorWidth": 276
+      }
+    },
+    {
+      "case": "Dark and light Canvas cards",
+      "result": "pass",
+      "detail": {
+        "dark": {
+          "card text": 16.28
+        },
+        "light": {
+          "card text": 16.49
+        }
+      }
+    },
+    {
+      "case": "Light and dark Bases table rows and controls",
+      "result": "pass",
+      "detail": {
+        "dark": {
+          "table text": 16.28
+        },
+        "light": {
+          "table text": 16.49
+        }
+      }
+    },
+    {
+      "case": "Light and dark appearance settings and keyboard focus",
+      "result": "pass",
+      "detail": {
+        "light": {
+          "control": {
+            "tag": "DIV",
+            "active": true,
+            "outline": "solid",
+            "label": "Base color scheme"
+          },
+          "ratios": {
+            "label": 16.49,
+            "description": 9.81,
+            "selected navigation": 12.29,
+            "keyboard outline": 8.88
+          }
+        },
+        "dark": {
+          "control": {
+            "tag": "DIV",
+            "active": true,
+            "outline": "solid",
+            "label": "Base color scheme"
+          },
+          "ratios": {
+            "label": 16.28,
+            "description": 11.66,
+            "selected navigation": 9.98,
+            "keyboard outline": 11.07
+          }
+        }
+      }
+    },
+    {
+      "case": "Light and dark desktop phone emulation",
+      "result": "pass",
+      "detail": {
+        "light": {
+          "mobile": true,
+          "width": 390,
+          "scrollWidth": 390,
+          "padding": "8px",
+          "editor": true
+        },
+        "dark": {
+          "mobile": true,
+          "width": 390,
+          "scrollWidth": 390,
+          "padding": "8px",
+          "editor": true
+        }
+      }
+    },
+    {
+      "case": "Light and dark view header keyboard focus",
+      "result": "pass",
+      "detail": {
+        "dark": {
+          "label": "Current view: reading",
+          "outlineContrast": 11.07
+        },
+        "light": {
+          "label": "Current view: reading",
+          "outlineContrast": 8.88
+        }
+      }
+    }
+  ],
+  "screenshots": [
+    "01-dark-reading.jpg",
+    "02-light-reading.jpg",
+    "03-dark-live-preview-selection.jpg",
+    "04-light-narrow-source.jpg",
+    "05-light-warning-and-error-callouts.jpg",
+    "06-dark-command-palette.jpg",
+    "07-light-appearance-settings.jpg",
+    "08-light-dialog-and-destructive-focus.jpg",
+    "09-dark-canvas.jpg",
+    "10-light-bases.jpg"
+  ]
+}
